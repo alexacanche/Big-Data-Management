@@ -37,5 +37,5 @@ Open question. (Example: the rating of movies for a certain page, saves the aver
 - **Operational complexity**: When space is unsed a proccess called compaction is done to reclaim this space, unfortunately it lower the performance od the machine. 
 - **Extreme complexity of achieving eventual consistency**: Being available for updates inpresence any failure.
 - **Lack of human-fault tolerance**: A data system with human-fault tolerance is vital since they are unavoidable.
-
+vb
 
