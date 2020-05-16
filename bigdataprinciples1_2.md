@@ -93,5 +93,10 @@ Object-Role Modelling is a conceptual modelling language. The predicates of an O
 ### 8. How does graph schemes help fact-based model?
 Captures the structure of a dataset stored, since there's no descriptioncof the types of facts contained in the dataset, nor any explanation of the relationships between them.
 
+### 9. The three core components of a graph schema and their description.
+- **Nodes**: Entities in the system.
+- **Edges**: Conection between nodes.
+- **Properties**: Information about entities.
 
-
+### 10. What was the issue of using JSON format to store facts?
+The wide flexibility of it. It can’t enforce requirements so, is open to human mistakes.
