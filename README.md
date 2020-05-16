@@ -1,1 +1,0 @@
-# Big-Date-Management
