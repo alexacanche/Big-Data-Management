@@ -37,5 +37,26 @@ Open question. (Example: the rating of movies for a certain page, saves the aver
 - **Operational complexity**: When space is unsed a proccess called compaction is done to reclaim this space, unfortunately it lower the performance od the machine. 
 - **Extreme complexity of achieving eventual consistency**: Being available for updates inpresence any failure.
 - **Lack of human-fault tolerance**: A data system with human-fault tolerance is vital since they are unavoidable.
-vb
+
+### 8. Give a brief and concise description of each layer of the lambda achitecture. 
+- **Batch Layer**: Stores an immutable, constantly growing master dataset, and compute arbitrary
+functions on that dataset.
+- **Serving Layer**: When new batch views are available, the serving layer automatically swaps those in so that more up-to-date results are available.
+- **Speed Layer**: Similar to batch layer, the only difference is that the speed layer only looks at recent data.
+
+### 9. Write some 5 other examples of elastic clouds.
+(answers may vary)
+- Google cloud.
+- Azure.
+- Softlayer.
+- Vmware.
+-AlertLogic.
+
+### 10. What is HDFS?
+Is a distributed, fault-tolerant storage system that can scale to petabytes of data. MapReduce is a horizontally scalable computation framework that integrates with HDFS
+
+
+## Chapter 1: Data model for Big Data
+
+### 1. According to the first example of database, when does data become big data? cite evidence.
 
