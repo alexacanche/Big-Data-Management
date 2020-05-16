@@ -14,7 +14,7 @@ The five most important characteristics of big data are: volume, variety, veraci
 - **Human-fault tolerance.** Since the code was created with this technique errors happened and data was lost. The system must be carefully thought out to limit the damage a human mistake can cause.
 - **Immutable data.** Pageview counts were being stored as the core dataset, which was continuously being mutated as new pageviews came in, instead of storing the raw pageview information.
 
-### 3. What is the Lambda Architecture compared to other data systems (Hadoop, Cassandr, Riak, etc.)?.
+### 3. What is the Lambda Architecture compared to other data systems (Hadoop, Cassandra, Riak, etc.)?.
 Is a merge of all of its propierties and better, such as handle very large amounts of data and parallelize large-scale batch computations on very large amounts of data.
 
 ### 4. Difference between information and data (write how can you achive data and its relation to data systems).
@@ -50,13 +50,48 @@ functions on that dataset.
 - Azure.
 - Softlayer.
 - Vmware.
--AlertLogic.
+- AlertLogic.
 
 ### 10. What is HDFS?
 Is a distributed, fault-tolerant storage system that can scale to petabytes of data. MapReduce is a horizontally scalable computation framework that integrates with HDFS
 
 
-## Chapter 1: Data model for Big Data
+## Chapter 2: Data model for Big Data
 
-### 1. According to the first example of database, when does data become big data? cite evidence.
+### 1. Think of a data system and give and example for the following concepts:
+(answers may vary)
+- **Database**: Facebook.
+- **Information**: Mutual friends.
+- **Data**: Friends changes
+- **Queries**: How many friends does Tommy have?
+- **Views**: Number of friends.
+
+### 2. Besides human-fault tolerance and simplicity, what other advantages do you consider from immutable data?
+(answers may vary)
+Security, higher-volume data handling, fewer dependencies, etc.
+
+### 3. Perpetuity in data is ... and how can you make data have it (example)?
+With immutability, perpetuity comes in the data making it "eternally true". An example would be adding date to a data, so it becomes forever true.
+
+### 4. What are the cases in which you delete data, not because they are not eternallly true?
+- Garbage collection
+- Regulations
+
+### 5. Using the example of FaceSpace, with your own words describe the main characteristics of fact-based model.
+- **Facts**: The example would be the act of tom adding a new friend, living in some place, working at some place.
+- **Timestamps**: Adding the a timestamps to the fact (adding a new friend, living in some place, working at some place) would make the data immutable and eternally true.
+- **ID**: Adding a unique number to each fact (adding a new friend, living in some place, working at some place) makes the data indentificable since there is a chance facts come in at the same time and have various with the same timestamp.
+
+### 6. Apart from the advantages described of FBM, what are other advantages of the model?
+- Simplicity (no index)
+- Historical queries
+- Easy to add new facts
+
+### 7. Write a type of Fact-Based Modelling (FBM) and describe it.
+Object-Role Modelling is a conceptual modelling language. The predicates of an ORM Model lend themselves to the analysis and design of graph database models in as much as ORM was originally conceived to benefit relational database design.
+
+### 8. How does graph schemes help fact-based model?
+Captures the structure of a dataset stored, since there's no descriptioncof the types of facts contained in the dataset, nor any explanation of the relationships between them.
+
+
 
