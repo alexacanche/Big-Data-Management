@@ -3,7 +3,7 @@
 ## Chapter 1: A new paradigm for Big Data
 
 ### 1. According to the first example of database, when does data become big data? cite evidence.
-The five most important characteristics of big data are: volume, variety, veracity, value and velocity. During the story we can see how he handled the problem as he realized the big amount of information it was being generated, the importance of the data as he had a portion of it unavilable while a machine was down, the rapidity of real-time data as the page become more popular and more people visited the page, the validation of it while a human-fault tolerance was applied and it was impossible to know which data got damaged.
+The five most important characteristics of big data are: volume, variety, veracity, value and velocity. During the story we can see how he handled the problem as he realized the big amount of information it was being generated, the importance of the data as he had a portion of it unavilable while a machine was down, the rapidity of real-time data as the page become more popular and more people visited the page, the validation of it while a human-fault tolerance wasn't applied and it was impossible to know which data got damaged.
 - > " The database can’t keep up with the load, so write requests to increment pageviews are timing out. "
 - > " As the application gets more and more popular, you keep having to reshard the database into more shards to keep up with the write load. Each time gets more and more painful because there’s so much more work to coordinate. "
 - > " Eventually you have so many shards that it becomes a not-infrequent occurrence for the disk on one of the database machines to go bad. That portion of the data is unavailable while that machine is down. "
