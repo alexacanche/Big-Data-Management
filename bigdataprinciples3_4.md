@@ -16,8 +16,16 @@
 When writing raw data and prevent bugs such as data corruption. When using you get errors at the time of writing the data—giving you full context as to how and why the data became invalid. In addition, the error prevents the program from corrupting the master dataset
 by writing that data. However, serialization frameworks are limited when it comes to achieving a fully rigorous schema.
 
-### 3. Write an example of node using Thrift.
-Is a merge of all of its propierties and better, such as handle very large amounts of data and parallelize large-scale batch computations on very large amounts of data.
+### 3. With your words what are properties in Thrift?
+(answers may vary)
+A combination of nodes (Unions) and edges (structs).
+
+### 4. What is an union data type?
+A single value that may have any of several representations. 
+
+### 5. Write an example of node using Thrift (different from the book)
+(answers may vary)
+union PersonID { 1: i64 user_id;}
 
 ### 4. Difference between information and data (write how can you achive data and its relation to data systems).
 Data is the purest information, where nothing else is derived from. You find data by asking questions and when you get to where it's derived from anything you'll find data. Since data systems ask those question by looking through the entire dataset the more general definition is of a data system would be: query = function(all data)
