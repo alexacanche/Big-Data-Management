@@ -27,8 +27,12 @@ A single value that may have any of several representations.
 (answers may vary)
 union PersonID { 1: i64 user_id;}
 
-### 4. Difference between information and data (write how can you achive data and its relation to data systems).
-Data is the purest information, where nothing else is derived from. You find data by asking questions and when you get to where it's derived from anything you'll find data. Since data systems ask those question by looking through the entire dataset the more general definition is of a data system would be: query = function(all data)
+### 6. What is an essential property while using schemas?  
+That they can evolve over time.
+
+### 7. Why you shouldn't reuse a field ID while changing schemas in Thrift?
+Thrift would try to deserialize that old data into the new field, which will lead to either invalid or incorrect data. 
+
 
 ### 5. Desired properties for a big data system (add a short description for each one)
 - **Robustness and fault tolerance**: Work no matter the issues with the machines and human mistakes.
@@ -38,32 +42,7 @@ Data is the purest information, where nothing else is derived from. You find dat
 - **Extensibility**: Open to changes without big losses. 
 - **Ad hoc queries**: Mine a dataset arbitrarily.
 - **Minimal maintenance**: Less work required to keep a system running smoothly.
-- **Debuggability**: Show precisely the mistakes if done any.
-
-### 6. Give an exmaple of fully incremental architecture (different from the book).
-Open question. (Example: the rating of movies for a certain page, saves the average of ratign fro movies until more people rate and the rate is incremented or decreased)
-
-### 7. Describe some problems of the fully incremental architecture
-- **Operational complexity**: When space is unsed a proccess called compaction is done to reclaim this space, unfortunately it lower the performance od the machine. 
-- **Extreme complexity of achieving eventual consistency**: Being available for updates inpresence any failure.
-- **Lack of human-fault tolerance**: A data system with human-fault tolerance is vital since they are unavoidable.
-
-### 8. Give a brief and concise description of each layer of the lambda achitecture. 
-- **Batch Layer**: Stores an immutable, constantly growing master dataset, and compute arbitrary
-functions on that dataset.
-- **Serving Layer**: When new batch views are available, the serving layer automatically swaps those in so that more up-to-date results are available.
-- **Speed Layer**: Similar to batch layer, the only difference is that the speed layer only looks at recent data.
-
-### 9. Write some 5 other examples of elastic clouds.
-(answers may vary)
-- Google cloud.
-- Azure.
-- Softlayer.
-- Vmware.
-- AlertLogic.
-
-### 10. What is HDFS?
-Is a distributed, fault-tolerant storage system that can scale to petabytes of data. MapReduce is a horizontally scalable computation framework that integrates with HDFS
+- **Debuggability**: Show precisely the mistakes if donestributed, fault-tolerant storage system that can scale to petabytes of data. MapReduce is a horizontally scalable computation framework that integrates with HDFS
 
 
 ## Chapter 2: Data model for Big Data
