@@ -12,11 +12,11 @@
 - Operating system or program bugs (software issues) (including third-party programs), or faulty network card drivers (older releases of manufacturer drivers), etc.
 - Interference from other software programs running.
 
-### 2. When would you use a serialization frameworks?
+### 2. When would you use a serialization framework?
 When writing raw data and prevent bugs such as data corruption. When using you get errors at the time of writing the data—giving you full context as to how and why the data became invalid. In addition, the error prevents the program from corrupting the master dataset
 by writing that data. However, serialization frameworks are limited when it comes to achieving a fully rigorous schema.
 
-### 3. With your words what are properties in Thrift?
+### 3. With your own words, what are properties in Thrift?
 (answers may vary)
 A combination of nodes (Unions) and edges (structs).
 
@@ -79,4 +79,12 @@ Thrift would try to deserialize that old data into the new field, which will lea
 In an HDFS cluster, there are two types of nodes: a single namenode and multiple datanodes. All (typically large) files are broken
 into blocks, usually 64 to 256 MB. These blocks are replicated (typically with 3 copies) among the HDFS servers (datanodes).The namenode provides a lookup service for clients accessing the data and ensures the blocks are correctly replicated across the cluster.
 
-### 6. 
+### 6. Create a situation when you would use vertical partitioning
+(answers may vary)
+You have a computation that only requires information collected during the past two weeks. The batch storage should allow you to partition your data so that a function only accesses data relevant to its computation.
+
+### 7. How do you do vertical partitioning?
+Vertically partitioning data on a distributed filesystem can be done by sorting your data into separate folders.
+
+### 8. Why using distributed filesystems API's is considerated low-level?
+While trying to append a folder of data into your master dataset if the master dataset folder contains any files of the same name, then the mv operation will fail and also if the files in the folder are of a different format than teh master dataset the mv operation won’t work at all.
