@@ -50,10 +50,9 @@ Thrift would try to deserialize that old data into the new field, which will lea
 
 ## Chapter 4: Data Storage in the batch layer
 
-### 1. Think of a data system and give and example for the following concepts:
-(answers may vary)
-- **Database**: Facebook.
-- **Information**: Mutual friends.
-- **Data**: Friends changes
-- **Queries**: How many friends does Tommy have?
-- **Views**: Number of friends.
+### 1. What are the three requirements for the master dataset?
+- **Read**: Support for parallel processing.
+- **Write**: Efficient appends of new data and scalable storage.
+- **Both**: Tunable storage and processing costs and enforceable immutability.
+
+### 2.
