@@ -43,7 +43,7 @@ Thrift would try to deserialize that old data into the new field, which will lea
 - Avro
 - Message Pack
 
-### 10. After your reading of the chapter, what are some advantages of using serialization frameworks?
+### 10. After reading the chapter, what are some advantages of using serialization frameworks?
 - It is easy to use and can be customized.
 - The serialized stream can be encrypted, authenticated and compressed.
 - Serialized classes can support coherent versioning and are flexible enough to allow gradual evolution of your application's object.
