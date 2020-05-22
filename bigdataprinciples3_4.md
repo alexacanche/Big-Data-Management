@@ -33,19 +33,22 @@ That they can evolve over time.
 ### 7. Why you shouldn't reuse a field ID while changing schemas in Thrift?
 Thrift would try to deserialize that old data into the new field, which will lead to either invalid or incorrect data. 
 
+### 8. What are the two approaches you can chose to help you with the limitations of serialization frameworks?
+- Wrap your generated code in additional code that checks the additional properties you care about, like ages being non-negative. 
+- Check the extra properties at the very  beginning of your batch-processing workflow.
 
-### 5. Desired properties for a big data system (add a short description for each one)
-- **Robustness and fault tolerance**: Work no matter the issues with the machines and human mistakes.
-- **Low latency reads and updates**: Real-time access and updates.
-- **Scalability**: Handle huge amounts of data.
-- **Generalization**: Must work with a variety of different applications.
-- **Extensibility**: Open to changes without big losses. 
-- **Ad hoc queries**: Mine a dataset arbitrarily.
-- **Minimal maintenance**: Less work required to keep a system running smoothly.
-- **Debuggability**: Show precisely the mistakes if donestributed, fault-tolerant storage system that can scale to petabytes of data. MapReduce is a horizontally scalable computation framework that integrates with HDFS
+### 9. What are other popular serialization frameworks? (Write at least three)
+- Boost Framework
+- Protocol Buffer
+- Avro
+- Message Pack
 
+### 10. After your reading of the chapter, what are some advantages of using serialization frameworks?
+- It is easy to use and can be customized.
+- The serialized stream can be encrypted, authenticated and compressed.
+- Serialized classes can support coherent versioning and are flexible enough to allow gradual evolution of your application's object.
 
-## Chapter 2: Data model for Big Data
+## Chapter 4: Data Storage in the batch layer
 
 ### 1. Think of a data system and give and example for the following concepts:
 (answers may vary)
