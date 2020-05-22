@@ -68,12 +68,15 @@ Thrift would try to deserialize that old data into the new field, which will lea
 - They implement fine-grained permissions systems, which are perfect for enforcing immutability.
 
 ### 4. Write 5 examples of distributed filesystem tools.
-- 
-- 
-- 
-- 
-- 
+(answers may vary)
+- DCE Distributed File System (DCE/DFS)
+- Sun Microsystems' Network File System (NFS)
+- Novell NetWare
+- Microsoft's Distributed File System
+- IBM/Transarc's DFS
 
 ### 5. How does nodes work in Hadoop Distributed File System?
+In an HDFS cluster, there are two types of nodes: a single namenode and multiple datanodes. All (typically large) files are broken
+into blocks, usually 64 to 256 MB. These blocks are replicated (typically with 3 copies) among the HDFS servers (datanodes).The namenode provides a lookup service for clients accessing the data and ensures the blocks are correctly replicated across the cluster.
 
-
+### 6. 
