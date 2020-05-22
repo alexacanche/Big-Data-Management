@@ -55,4 +55,25 @@ Thrift would try to deserialize that old data into the new field, which will lea
 - **Write**: Efficient appends of new data and scalable storage.
 - **Both**: Tunable storage and processing costs and enforceable immutability.
 
-### 2.
+### 2. According to the text what are the disadvantages of using key/value store for the master dataset?
+- There’s no natural key in the data model, nor is one necessary because the data is meant to be consumed in bulk.
+- Key/value stores need fine-grained access to key/value pairs to do random reads and writes, you can’t compress multiple key/value pairs together.
+- They are meant to be used  as mutable stores, which is a problem if enforcing immutability is so crucial for the  master dataset.
+- It has a lot of things you don’t need: random reads, random writes, and all the machinery behind making those work.
+
+### 3. What are the advantages of using distributed filesystems?
+- You have full control over the bytes of a file.
+- You have the full freedom to compress them however you want. 
+- It doesn't limits your ability to  tune storage cost versus processing cost.
+- They implement fine-grained permissions systems, which are perfect for enforcing immutability.
+
+### 4. Write 5 examples of distributed filesystem tools.
+- 
+- 
+- 
+- 
+- 
+
+### 5. How does nodes work in Hadoop Distributed File System?
+
+
