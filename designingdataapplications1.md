@@ -16,9 +16,9 @@ cases), and they should all be able to work on it productively.
 - Performs good enough under the expected load and data volume. (charges fast even though the file is heavy)
 - Prevents any unauthorized access and abuse. (trying to edit the file of someone else without forking)
 
-### 3. With your own words, what are properties in Thrift?
+### 3. Write other three other tools that can help increase the fault-tolerance like the netflix chaos monkey.
 (answers may vary)
-A combination of nodes (Unions) and edges (structs).
+Gremlin, pumba, chaos toolkit, simian army, powerfulSeal, litmus, etc.
 
 ### 4. What is an union data type?
 A single value that may have any of several representations. 
