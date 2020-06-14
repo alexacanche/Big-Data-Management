@@ -23,3 +23,4 @@ dynamic and expressive data model.
 - Enterprise JavaBeans (EJB).
 
 ### 4. Imagine you are creating a relational database and you are now creating a table for shipping orders, using the many-to-many relationships how would you create your table?
+![many-to-may](img/948134e3-2c9d-4767-88ff-f8bbd27d5f58.png)
