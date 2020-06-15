@@ -61,8 +61,12 @@ The logic of the query is expressed with snippets of code, which are called repe
 - **Amazon Neptune:** Amazon Neptune is a fully managed graph database by Amazon.com. It is used as a web service and is part of Amazon Web Services. Supports popular graph models property graph and W3C’s RDF, and their respective query languages Apache TinkerPop Gremlin and SPARQL
 - **AllegroGraph:** Resource Description Framework (RDF) and graph database.
 
-### 11. 
-
+### 11. Create an example of cypher query.
+```
+LOAD CSV WITH HEADERS FROM “https://raw.githubusercontent.com/neo4j/neo4j/2.3/manual/cypher/cypherdocs/src/docs/graphgists/querytuning/movies.csv” AS line 
+MERGE (m:Movie {title:line.title}) 
+ON CREATE SET m.released = toInt(line.released), m.tagline = line.tagline
+```
 
 
 **References:** 
