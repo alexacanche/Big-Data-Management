@@ -61,14 +61,37 @@ The logic of the query is expressed with snippets of code, which are called repe
 - **Amazon Neptune:** Amazon Neptune is a fully managed graph database by Amazon.com. It is used as a web service and is part of Amazon Web Services. Supports popular graph models property graph and W3C’s RDF, and their respective query languages Apache TinkerPop Gremlin and SPARQL
 - **AllegroGraph:** Resource Description Framework (RDF) and graph database.
 
-### 11. Create an example of cypher query.
+### 11. Imagine if we put graph data in a relational structure, can we also query it using SQL?
+Yes, but with some difficulty. In a relational database, you usually know in advance which joins you need in your query. In a graph query, you may need to traverse a variable number of edges before you find the vertex you’re looking for, i.e. the number of joins is not fixed in advance.
+
+### 12. Create an example of cypher query.
 ```
 LOAD CSV WITH HEADERS FROM “https://raw.githubusercontent.com/neo4j/neo4j/2.3/manual/cypher/cypherdocs/src/docs/graphgists/querytuning/movies.csv” AS line 
 MERGE (m:Movie {title:line.title}) 
 ON CREATE SET m.released = toInt(line.released), m.tagline = line.tagline
 ```
+### 13. What are Triple-Stores?
+In a triple-store, all information is stored in the form of very simple three-part statements:v(subject, predicate, object). For example, in the triple (Jim, likes, bananas), Jim is the subject, likes is the predicate (verb), and bananas is the object.
+
+### 14. Write an example of SPARQL query.
+```
+PREFIX : <urn:example:>
+
+SELECT ?personName WHERE {
+?person :name ?personName.
+?person :bornIn / :within* / :name "United States".
+?person :livesIn / :within* / :name "Europe".
+}
+```
+
+### 15. Describe Datalog.
+Datalog’s data model is similar to the triple-store model, generalized a bit. Instead of writing a triple as (subject, predicate, object), we write it as predicate(subject, object).
+
+
 
 
 **References:** 
 - https://www.ionos.com/digitalguide/websites/web-development/imperative-programming/
 - https://www.ionos.com/digitalguide/websites/web-development/declarative-programming/
+- https://neo4j.com/graphgist/advanced-query-tuning-example
+- https://en.m.wikipedia.org/wiki/Graph_database
