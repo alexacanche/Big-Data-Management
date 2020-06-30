@@ -133,6 +133,14 @@ Is a separate database that analysts can query to their earts’ content, withou
 Data is extracted from OLTP databases (using either a periodic data dump or a continuous stream of updates), transformed into an analysis-friendly schema, cleaned up, and then loaded into the data warehouse.
 ![ETL](img/35.png)
 
+### 9. What is star schema?
+When the table relationships are visualized, the fact table is in the middle, surrounded by its dimension tables; the connections to these tables are like the rays of a star.
+
+### 10. What is snowflake schema?
+where dimensions are further broken down into subdimensions. For example, there could be separate tables for brands and product categories, and each row in the dim_product table could reference the brand and category as foreign keys, rather than storing them as strings in the dim_product table. Snowflake schemas are more normalized than star schemas, but star schemas are often preferred because they are simpler for analysts to work with.
+
+
+
 **References:** 
 - https://www.ionos.com/digitalguide/websites/web-development/imperative-programming/
 - https://www.ionos.com/digitalguide/websites/web-development/declarative-programming/
