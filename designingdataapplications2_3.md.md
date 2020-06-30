@@ -113,6 +113,19 @@ Thus, it becomes a data structure in which insertion and search operations are v
 A good solution is to break the log into segments of a certain size by closing a segment file when it reaches a certain size, and making subsequent writes to a new segment file. We can then perform compaction on these segments, as illustrated in the picture below. Compaction means throwing away duplicate keys in the log, and keeping only the most recent update for each key.
 ![ss](img/10.png)
 
+### 5. Write a comparision table about B-Trees and LSM-Trees
+|                                  B-Trees                                   |                                              LSM-Trees                                             |
+|:--------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------:|
+| More mature implementations                                                | Not mature enough                                                                                  |
+| Not interesting enough                                                     | Interesting due to their performance characteristic                                                |
+| faster for reads                                                           | faster for writes                                                                                  |
+| A B-tree index must write every piece of data at least twice               | Sequentially write compact SSTable files rather than having to overwrite several pages in the tree |
+| B-tree storage engines leave some disk space unused due to fragmenta‐ tion | Can be compressed better                                                                           |
+| Each key exists in exactly one place in the index                          | May have multiple copies of the same key in different segments.                                    |
+
+### 6. What are the difference between OLTP and OLAP?
+![OLTPOLAP](img/10.png)
+
 **References:** 
 - https://www.ionos.com/digitalguide/websites/web-development/imperative-programming/
 - https://www.ionos.com/digitalguide/websites/web-development/declarative-programming/
