@@ -98,6 +98,7 @@ Hash Table is a data structure which stores data in an associative manner. In a 
 Thus, it becomes a data structure in which insertion and search operations are very fast irrespective of the size of the data. Hash Table uses an array as a storage medium and uses hash technique to generate an index where an element is to be inserted or is to be located from.
 ![hast table](img/450px-Hash_table_5_0_1_1_1_1_1_LL.svg.png)
 
+### 3. 
 
 **References:** 
 - https://www.ionos.com/digitalguide/websites/web-development/imperative-programming/
