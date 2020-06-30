@@ -98,7 +98,20 @@ Hash Table is a data structure which stores data in an associative manner. In a 
 Thus, it becomes a data structure in which insertion and search operations are very fast irrespective of the size of the data. Hash Table uses an array as a storage medium and uses hash technique to generate an index where an element is to be inserted or is to be located from.
 ![hast table](img/450px-Hash_table_5_0_1_1_1_1_1_LL.svg.png)
 
-### 3. 
+### 3. Advantages and disadvantages of Bitcask
+| Advantages                                                                  | Disadvantages           |
+|-----------------------------------------------------------------------------|-------------------------|
+| Low latency per item read or written                                        | Keys must fit in memory |
+| High throughput, especially when writing an incoming stream of random items |                         |
+| Ability to handle datasets larger than RAM without degradation              |                         |
+| Single seek to retrieve any value                                           |                         |
+| Predictable lookup and insert performance                                   |                         |
+| Fast, bounded crash recovery                                                |                         |
+| Easy Backup                                                                 |                         |
+
+### 4. How do we avoid eventually running out of disk space?
+A good solution is to break the log into segments of a certain size by closing a segment file when it reaches a certain size, and making subsequent writes to a new segment file. We can then perform compaction on these segments, as illustrated in the picture below. Compaction means throwing away duplicate keys in the log, and keeping only the most recent update for each key.
+
 
 **References:** 
 - https://www.ionos.com/digitalguide/websites/web-development/imperative-programming/
@@ -106,4 +119,4 @@ Thus, it becomes a data structure in which insertion and search operations are v
 - https://neo4j.com/graphgist/advanced-query-tuning-example
 - https://en.m.wikipedia.org/wiki/Graph_database
 - https://www.tutorialspoint.com/data_structures_algorithms/hash_data_structure.htm
-
+- https://docs.riak.com/riak/kv/2.2.3/setup/planning/backend/bitcask/index.html
