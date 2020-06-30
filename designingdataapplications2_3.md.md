@@ -111,7 +111,7 @@ Thus, it becomes a data structure in which insertion and search operations are v
 
 ### 4. How do we avoid eventually running out of disk space?
 A good solution is to break the log into segments of a certain size by closing a segment file when it reaches a certain size, and making subsequent writes to a new segment file. We can then perform compaction on these segments, as illustrated in the picture below. Compaction means throwing away duplicate keys in the log, and keeping only the most recent update for each key.
-
+![ss](img/Screenshot from 2020-06-30 15-35-10.png)
 
 **References:** 
 - https://www.ionos.com/digitalguide/websites/web-development/imperative-programming/
