@@ -124,7 +124,7 @@ A good solution is to break the log into segments of a certain size by closing a
 | Each key exists in exactly one place in the index                          | May have multiple copies of the same key in different segments.                                    |
 
 ### 6. What are the difference between OLTP and OLAP?
-![OLTPOLAP](img/10.png)
+![OLTPOLAP](img/11.png)
 
 **References:** 
 - https://www.ionos.com/digitalguide/websites/web-development/imperative-programming/
