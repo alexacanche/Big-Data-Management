@@ -141,7 +141,7 @@ where dimensions are further broken down into subdimensions. For example, there 
 
 ### 11. What is th idea of column-oriented storage?
 Don’t store all the values from one row together, but store all the values from each column together instead. If each column is stored in a separate file, a query only needs to read and parse those columns that are used in that query, which can save a lot of work. This principle is illustrated in the image below.
-![cos](img/26.png)
+![cos](img/36.png)
 
 ### 12. Investigate other algorithms for columns compression and describe them.
 - **Dictionary Encoding:** hese schemes replace frequent patterns with smaller codes. A column-optimized variant of dictionary encoding is new Implementation. Row oriented datastores are basically not capable of blending attributes from more than one tuple in a single entry thus making dictionary encoding schemes not to function fully as they can only map attribute values from a single tuple to dictionary entries.
