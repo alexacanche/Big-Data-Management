@@ -126,6 +126,13 @@ A good solution is to break the log into segments of a certain size by closing a
 ### 6. What are the difference between OLTP and OLAP?
 ![OLTPOLAP](img/11.png)
 
+### 7. What is a data warehouse?
+Is a separate database that analysts can query to their earts’ content, without affecting OLTP operations [48]. The data warehouse conains a read-only copy of the data in all the various OLTP systems in the company.
+
+### 8. What is Extract–Transform–Load (ETL)?
+Data is extracted from OLTP databases (using either a periodic data dump or a continuous stream of updates), transformed into an analysis-friendly schema, cleaned up, and then loaded into the data warehouse.
+![ETL](img/12.png)
+
 **References:** 
 - https://www.ionos.com/digitalguide/websites/web-development/imperative-programming/
 - https://www.ionos.com/digitalguide/websites/web-development/declarative-programming/
