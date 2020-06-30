@@ -131,7 +131,7 @@ Is a separate database that analysts can query to their earts’ content, withou
 
 ### 8. What is Extract–Transform–Load (ETL)?
 Data is extracted from OLTP databases (using either a periodic data dump or a continuous stream of updates), transformed into an analysis-friendly schema, cleaned up, and then loaded into the data warehouse.
-![ETL](img/12.png)
+![ETL](img/35.png)
 
 **References:** 
 - https://www.ionos.com/digitalguide/websites/web-development/imperative-programming/
