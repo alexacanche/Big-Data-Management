@@ -87,7 +87,11 @@ SELECT ?personName WHERE {
 ### 15. Describe Datalog.
 Datalog’s data model is similar to the triple-store model, generalized a bit. Instead of writing a triple as (subject, predicate, object), we write it as predicate(subject, object).
 
+ 
+## Chapter 3: Storage and Retrieval
 
+### 1. How does indexes affect databases?
+Indexes speed up read queries, but every index slows down writes.
 
 
 **References:** 
