@@ -139,7 +139,9 @@ When the table relationships are visualized, the fact table is in the middle, su
 ### 10. What is snowflake schema?
 where dimensions are further broken down into subdimensions. For example, there could be separate tables for brands and product categories, and each row in the dim_product table could reference the brand and category as foreign keys, rather than storing them as strings in the dim_product table. Snowflake schemas are more normalized than star schemas, but star schemas are often preferred because they are simpler for analysts to work with.
 
-
+### 11. What is th idea of column-oriented storage?
+Don’t store all the values from one row together, but store all the values from each column together instead. If each column is stored in a separate file, a query only needs to read and parse those columns that are used in that query, which can save a lot of work. This principle is illustrated in the image below.
+![cos](img/26.png)
 
 **References:** 
 - https://www.ionos.com/digitalguide/websites/web-development/imperative-programming/
