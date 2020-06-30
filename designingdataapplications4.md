@@ -41,7 +41,7 @@ They handle schema changes and support systems where old and new data and code n
 In a database, the process that writes to the database encodes the data, and the process that reads from the database decodes it.
 
 ### 8. Write an example of what could happen if we do not use schema felxibility?
-![](38.png)
+![](img/38.png)
 
 **References**
 - https://old.floatingsun.net/articles/thrift-vs-protocol-buffers/index.html
