@@ -37,11 +37,18 @@ They handle schema changes and support systems where old and new data and code n
 - Avro creates a self-describing file named Avro Data File, in which it stores data along with its schema in the metadata section.
 -Avro is also used in Remote Procedure Calls (RPCs). During RPC, client and server exchange schemas in the connection handshake.
 
-## 7. How is the encoding in databases?
+### 7. How is the encoding in databases?
 In a database, the process that writes to the database encodes the data, and the process that reads from the database decodes it.
 
 ### 8. Write an example of what could happen if we do not use schema felxibility?
 ![](img/38.png)
+
+### 9. What is REST and RPC?
+**REST** is not a protocol, but rather a design philosophy that builds upon the principlesof HTTP. It emphasizes simple data formats, using URLs for identifying resources and using HTTP features for cache control, authentication, and content type negotiation.
+The **RPC** model tries to make a request to a remote network service look the same as calling a function or method in your programming language, within the same process (this abstraction is called location transparency).
+
+### 10. How are message brokers used?
+One process sends a message to a named queue or topic, and the broker ensures that the message is delivered to one or more consumers of or subscribers to that queue or topic. There can be many producers and many consumers on the same topic.
 
 **References**
 - https://old.floatingsun.net/articles/thrift-vs-protocol-buffers/index.html
