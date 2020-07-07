@@ -48,6 +48,20 @@ Because the benefits rarely outweigh the added complexity. However, there are so
 ### 11. What are three example topologies in which multi-leader replication can be set up?
 ![topo](img/41.png)
 
+### 12. What are two mechanisms used in Dynamo-style datastores?
+- **Read repair**: when a client makes a read from several nodes in parallel, it can detect any stale responses.
+- **Anti-entropy process**: some datastores have a background process that constantly looks for differences in the data between replicas and copies any missing data from one replica to another.
+
+### 13. If a write succeeded on some replicas but failed on others (for example because the disks on some nodes are full), and overall succeeded on fewer than w replicas, it is not rolled back on the replicas where it succeeded, what happens?
+This means that if a write was reported as failed, subsequent reads may or may not return the value from that write.
+
+### 14. What is hinted handoff?
+Once the network interruption is fixed, any writes that one node temporarily accepted on behalf of another node are sent to the appropriate “home” nodes.
+
+### 15. Define version vector
+Version vectors are sent from the database replicas to clients when values are read, and need to be sent back to the database when a value is subsequently written. (Riak encodes the version vector as a string that it calls causal context.) The version vector allows the database to distinguish between overwrites and concurrent writes.
+
 ### References
 - https://www.slideshare.net/HBaseCon/synchronous-replication-for-hbase
+- https://gousios.org/courses/bigdata/dist-databases.html
  
