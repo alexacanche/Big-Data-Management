@@ -20,10 +20,10 @@
 After the failure of a leader, one of the followers needs to be promoted to be the new leader, clients need to be reconfigured to send their writes to the new leader, and the other followers need to start consuming data changes from the new leader.
 
 ### 5.Write a brief description about the different replication logs methods
--**Statement-based replication**: the leader logs every write request (statement) that it executes and sends that statement log to its followers.
--**Write-ahead log (WAL) shipping**: the log is an append-only sequence of bytes containing all writes to the database. We can use the exact same log to build a replica on another node: besides writing the log to disk, the leader also sends it across the network to its followers.
--**Logical (row-based) log replication**: use different log formats for replication and for the storage engine, which allows the replication log to be decoupled from the  storage engine internals.
--**Trigger-based replication**: A trigger lets you register custom application code that is automatically executed when a data change (write transaction) occurs in a database system. The trigger hasthe opportunity to log this change into a separate table, from which it can be read by an external process.
+- **Statement-based replication**: the leader logs every write request (statement) that it executes and sends that statement log to its followers.
+- **Write-ahead log (WAL) shipping**: the log is an append-only sequence of bytes containing all writes to the database. We can use the exact same log to build a replica on another node: besides writing the log to disk, the leader also sends it across the network to its followers.
+- **Logical (row-based) log replication**: use different log formats for replication and for the storage engine, which allows the replication log to be decoupled from the  storage engine internals.
+- **Trigger-based replication**: A trigger lets you register custom application code that is automatically executed when a data change (write transaction) occurs in a database system. The trigger hasthe opportunity to log this change into a separate table, from which it can be read by an external process.
 
 ### 6. How can you implement read-after-write consistency in a system with leader-based replication?
 - When reading something that the user may have modified, read it from the leader; otherwise, read it from a follower.
@@ -36,6 +36,17 @@ Making sure that each user always makes their reads from the same replica (diffe
 
 ### 8. How does the replication lag anomalies with violation of causality works?
 ![comparison](img/40.png)
+
+### 9. Why isn't useful to use multi-leader setup within a single datacenter?
+Because the benefits rarely outweigh the added complexity. However, there are some situations in which this configuration is reasonable.
+
+### 10. The biggest disadvantage of multi-leader replication is the writing conflics, how can you solve them?
+- One master per session If session writes do not interfere (e.g., data are only stored per user), this will avoid issues altogether.
+- Converge to consistent state Apply a last-write-wins policy, ordering writes by timestamp (may loose data) or report conflict to the application and let it resolve it (same as git or Google docs)
+- Use version vectors Modelled after version clocks, they encode happens before relationships at an object level.
+
+### 11. What are three example topologies in which multi-leader replication can be set up?
+![topo](img/41.png)
 
 ### References
 - https://www.slideshare.net/HBaseCon/synchronous-replication-for-hbase
