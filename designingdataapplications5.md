@@ -7,4 +7,5 @@
 - To allow the system to continue working even if some of its parts have failed (and thus increase availability).
 - To scale out the number of machines that can serve read queries (and thus increase read throughput).
 
-### 2. Make a comparision of Synchronous vs. Asynchronous Replication
+### 2. Make a comparison of Synchronous vs. Asynchronous Replication
+![comparison](img/39.png)
